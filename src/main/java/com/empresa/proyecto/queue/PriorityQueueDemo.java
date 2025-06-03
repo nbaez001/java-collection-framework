@@ -1,6 +1,7 @@
 package com.empresa.proyecto.queue;
 
 import java.util.*;
+import java.util.concurrent.BlockingQueue;
 
 public class PriorityQueueDemo {
     public static void main(String[] args) {
