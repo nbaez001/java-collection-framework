@@ -1,4 +1,4 @@
-package com.empresa.proyecto.concurrentcollection;
+package com.empresa.proyecto.additional.concurrentcollection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
