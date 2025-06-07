@@ -14,24 +14,17 @@ public class StreamsIntroduction {
         list.add(50);
         System.out.println(list);
 
-        List<Integer> newList = new ArrayList<>();
-        for (Integer i : list) {
-            if (i >= 30) {
-                newList.add(i);
-            }
-        }
-        System.out.println(newList);
+        // Streams count
+        long count = list.stream().filter(i -> i >= 30).count();
+        System.out.println(count);
 
-        // Streams filter
-        List<Integer> l1 = list.stream()
-                .filter(i -> i >= 30)
-                .collect(Collectors.toList());
-        System.out.println(l1);
+        // Default Natural Sorting: sorted()
+        List<Integer> l3 = list.stream().sorted().collect(Collectors.toList());
+        System.out.println(l3);
 
-        // Streams map
-        List<Integer> l2 = list.stream()
-                .map(i -> i * 2)
+        // Custom sorting: sorted(Comparator c)
+        List<Integer> l4 = list.stream().sorted((i1, i2) -> i2.compareTo(i1))
                 .collect(Collectors.toList());
-        System.out.println(l2);
+        System.out.println(l4);
     }
 }
