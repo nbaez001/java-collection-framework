@@ -9,10 +9,19 @@ public class Demo {
 
         IData<String> d3 = new Data<>("We have implemented a generic interface");
         System.out.println(d3.getData());
+
+        Data<String> d4 = new Data<>("data 4");
+        BaseData<String> d5 = d4;
     }
 }
 
-class Data<T> implements IData<T>{
+interface IData<T> {
+    T getData();
+    void setData(T data);
+}
+class BaseData<T>{}
+
+class Data<T> extends BaseData<T> implements IData<T>{
     private T data;
     public Data(T data) {
         this.data = data;
@@ -29,9 +38,4 @@ class Data<T> implements IData<T>{
     public String toString() {
         return "data is: " + data;
     }
-}
-
-interface IData<T> {
-    T getData();
-    void setData(T data);
 }
