@@ -23,9 +23,9 @@ public class ErasureDemo {
         return a.iterator().next(); // return (String) a.iterator().next();
     }
 
-    public static String method2(List<String> l){
+    /*public static String method2(List<String> l){
         return null;
-    }
+    }*/
 
     public static String method2(List<Integer> l){
         return null;
